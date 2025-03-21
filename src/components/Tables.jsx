@@ -5,6 +5,7 @@ import {
   getCoreRowModel,
   getFilteredRowModel,
   getSortedRowModel,
+  getPaginationRowModel,
   useReactTable,
 } from "@tanstack/react-table";
 import {
@@ -77,7 +78,6 @@ const columns = [
   }),
 ];
 function Tables({ datas }) {
-  
   const [data] = useState([...datas]);
   const [sorting, setSorting] = useState([]);
   const [globalFilter, setGlobalFilter] = useState([]);
@@ -99,7 +99,7 @@ function Tables({ datas }) {
 
     onSortingChange: setSorting,
     getSortedRowModel: getSortedRowModel(),
-
+    getPaginationRowModel: getPaginationRowModel(),
     onGlobalFilterChange: setGlobalFilter,
     getFilteredRowModel: getFilteredRowModel(),
   });
@@ -130,12 +130,12 @@ function Tables({ datas }) {
                     className="px-6 py-3 text-left text-xs font-medium text-gray-200 uppercase tracking-wider"
                   >
                     <div
-                    {...{
-                      className: header.column.getCanSort()
-                        ? "cursor-pointer select-none flex items-center"
-                        : "",
-                      onClick: header.column.getToggleSortingHandler(),
-                    }}
+                      {...{
+                        className: header.column.getCanSort()
+                          ? "cursor-pointer select-none flex items-center"
+                          : "",
+                        onClick: header.column.getToggleSortingHandler(),
+                      }}
                     >
                       {flexRender(
                         header.column.columnDef.header,
@@ -215,17 +215,17 @@ function Tables({ datas }) {
             </span>
 
             <button
-            className="p-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50"
-            onClick={() => table.nextPage()}
-            disabled={!table.getCanNextPage()}
+              className="p-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50"
+              onClick={() => table.nextPage()}
+              disabled={!table.getCanNextPage()}
             >
               <ChevronRight size={20} />
             </button>
 
             <button
-            className="p-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50"
-            onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-            disabled={!table.getCanNextPage()}
+              className="p-2 rounded-md bg-gray-100 text-gray-600 hover:bg-gray-200 disabled:opacity-50"
+              onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+              disabled={!table.getCanNextPage()}
             >
               <ChevronsRight size={20} />
             </button>

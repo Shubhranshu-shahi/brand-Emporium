@@ -12,6 +12,7 @@ import Parties from "./assets/pages/Parties";
 import SideNavNew from "./assets/pages/SideNavNew";
 import TestForm from "./assets/pages/testForm";
 import AddItem from "./assets/pages/AddItem";
+import Invoice from "./components/Invoice";
 
 function App() {
   const [num, setNum] = useState(0);
@@ -33,6 +34,7 @@ function App() {
         <Route path="/reports" element={<Reports />} />
         <Route path="/testform" element={<TestForm />} />
         <Route path="/items/add-item" element={<AddItem />} />
+        <Route path="/invoice" element={<Invoice/>} />
       </Routes>
     </div>
   );

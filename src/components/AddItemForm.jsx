@@ -56,7 +56,7 @@ function AddItemForm() {
           <button class="text-red-500 border-b-2 border-red-500 px-4 py-2">
             Pricing
           </button>
-          <button class="text-gray-500 px-4 py-2">Stock</button>
+          
         </div>
 
         <div class="grid grid-cols-3 gap-4">

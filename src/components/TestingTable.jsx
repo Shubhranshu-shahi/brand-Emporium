@@ -72,7 +72,7 @@ function TestingTable() {
             <div className="items-center max-w-3xs border-b py-2">
               <input
                 // tabIndex="0"
-                onKeyDown={searchFunction}
+                
                 className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
                 type="text"
                 placeholder="Search"

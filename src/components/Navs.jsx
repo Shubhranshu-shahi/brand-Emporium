@@ -30,7 +30,7 @@ export const Navs = () => {
                   ></path>
                 </svg>
               </button>
-              <a href="https://flowbite.com" className="flex ms-2 md:me-24">
+              <a href="#" className="flex ms-2 md:me-24">
                 <img
                   src="https://flowbite.com/docs/images/logo.svg"
                   className="h-8 me-3"
@@ -46,7 +46,7 @@ export const Navs = () => {
                 <div>
                   <button
                     type="button"
-                    className="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    className="flex text-sm bg-gray-100 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
                     aria-expanded="false"
                     data-dropdown-toggle="dropdown-user"
                   >
@@ -123,7 +123,7 @@ export const Navs = () => {
 
       <aside
         id="logo-sidebar"
-        className="fixed bg-gray-900 top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full border-r border-gray-900 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        className="fixed  bg-gray-900 top-0 left-0 z-40 w-64 min-h-full pt-20 transition-transform -translate-x-full border-r border-gray-900 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
         aria-label="Sidebar"
       >
         <div className="h-full px-3 pb-4 overflow-y-auto bg-gray-900 dark:bg-gray-800">

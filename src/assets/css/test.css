@@ -37,7 +37,7 @@ html {
 
   thead {
     /* // Accessibly hide <thead> on narrow viewports */
-    position: absolute;
+    position: relative;
     clip: rect(1px 1px 1px 1px);
     /* IE6, IE7 */
     padding: 0;
@@ -73,7 +73,7 @@ html {
   tr,
   th,
   td {
-    display: block;
+    /* display: block; */
     padding: 0;
     text-align: left;
     white-space: normal;
@@ -122,14 +122,14 @@ html {
     }
   }
 
-  tfoot {
+  /* tfoot {
     font-size: 0.8em;
     font-style: italic;
 
     @media (min-width: 62em) {
       font-size: 0.9em;
     }
-  }
+  } */
 
   tbody {
     @media (min-width: 48em) {
@@ -210,8 +210,4 @@ html {
     }
   }
 }
-.ransaction-table form input[type="text"] {
-  box-sizing: border-box;
-  color: red !important;
-  padding-left: 10px;
-}
+

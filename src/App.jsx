@@ -24,6 +24,7 @@ function App() {
       <Navs />
       {/* <Test/> */}
       <Routes>
+        <Route path="/" element={<Dashboad />} />
         <Route path="/dashboard" element={<Dashboad />} />
         <Route path="/parties" element={<Parties />} />
         <Route path="/test" element={<Test />} />
